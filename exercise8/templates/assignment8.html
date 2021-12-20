@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+assignment 8
+{% endblock %}
+
+
+{% block body %}
+{{ super() }}
+
+{% if account == 'primum' %}
+    {% include 'include.html' %}
+{% else %}
+    {% include 'include2.html' %}
+{% endif %}
+
+<h2> Full name </h2>
+{{ name | lower() }}
+<h2> Hobbies </h2>
+<ol>
+    {% for hobby in hobbies | sort(reverse=True) %}
+        <li>{{ hobby }} </li>
+    {% endfor %}
+</ol>
+
+{% endblock %}

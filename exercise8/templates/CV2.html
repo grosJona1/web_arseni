@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='CV.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+</head>
+<body class="Contact">
+    <div >
+    <ul>
+
+        <h1 id="h4" class="header">Contact Me</h1>
+            <Ul>
+            <lable for="Firstname">First name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</lable>
+            <input type="text" name="Firstname" id="Firstname"><br><br>
+            <label for="Lastname">Last name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input type="text"><br><br>
+            <label for="email">Email&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input id="email" name="email" type="email"><br><br>
+            <label for="Phone">Phone&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+            <input id="Phone" type="text" required pattern="[0-9]{10}"><br><br>
+        </ul>
+        </ul>
+    <ul>
+        <button onclick="myFunction()">Send</button>
+        <p id="Notice">Please make sure the phone number and email are listed correctly</p>
+        <p id="Send"></p>
+        <script>
+        function myFunction() {
+        const inpObj = document.getElementById("Phone");
+        if (!inpObj.checkValidity()) {
+        document.getElementById("Send").innerHTML = inpObj.validationMessage;
+        } else {
+        document.getElementById("Send").innerHTML = "Thank You, we will be in touch";
+        }
+        }
+        </script>
+     </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+html, body, .grid-container { height: 100%; margin: 0; }
+
+@keyframes RotatingPhoto {
+  0%{
+      transform: rotate(0deg)
+  }
+  50%{
+      transform: rotate(-180deg);
+  }
+  100%{
+      transform:rotate(360deg) ;
+  }}
+  img{
+    width: 50%;
+    animation-name: RotatingPhoto;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr 1fr 1fr;
+  grid-template-rows: 0.3fr 1.7fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Name Name Name Name"
+    "Skills Body Body Body"
+    "Skills Body Body Body";
+}
+
+.Name { 
+    background-color: rgba(58, 138, 204, 0.3);
+  grid-area: Name; 
+  text-align: center;
+  line-height: 0px;
+}
+
+.Skills { 
+  background-color: rgba(201, 76, 76, 0.3);
+  grid-area: Skills; 
+  border-right: solid black;
+  
+}
+
+.Skills h2 {
+  text-decoration: underline;
+  text-align: center;
+}
+
+.Skills ul li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.Body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Education Education Education"
+    "Work Work Work";
+  grid-area: Body;
+ background-color: rgba(201, 76, 76, 0.3);
+
+}
+
+.Education { 
+  grid-area: Education; 
+  padding-left: 20px;
+  border-bottom: solid black;
+}
+
+.Education h2 {
+  text-decoration: underline;
+}
+
+.Work { 
+    
+  grid-area: Work; 
+  padding-left: 20px;
+}
+
+.Work h2 {
+  text-decoration: underline;
+}
+
+.Work ul li {
+  padding: 1px;
+}
+
+#Salesforce {
+  color: rgb(0, 162, 255);
+}
+@media screen and (max-width: 600px) {
+  body {
+  background-color: olive;
+}}
+#linkedin{
+  float:right;
+  margin-right: 20px;
+padding-bottom: 10px;
+
+font-family: Verdana, sans-serif;
+color: #131212;}
+#Email{
+  float:right;
+  margin-right: 20px;
+padding-bottom: 10px;
+font-size: 16px;
+font-family: Verdana, sans-serif;
+color: #131212;}
+
+
+input{
+  
+  color: rgb(16, 16, 17);
+}
+.Contact { 
+  
+  background-color: rgba(201, 76, 76, 0.3);
+  border-right: solid black;}
+  
+  #Notice{
+    color: rgb(0, 162, 255);
+    font-size: 22px;
+  }
