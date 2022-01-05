@@ -1,5 +1,6 @@
 from flask import Flask, redirect, url_for, render_template, request #query parameters
 from flask import session
+from interact_with_DB import interact_db
 
 
 app = Flask(__name__) # we will work on one instanse of the class Flask
@@ -52,6 +53,9 @@ def logout_fun():
     session['userinside'] = False
     return render_template('Logout.html')
 
+
+from pages.assignment10.assignment10 import assignment10
+app.register_blueprint(assignment10)
 
 if __name__ == '__main__':
     app.run(debug=True)

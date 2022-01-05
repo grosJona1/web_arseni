@@ -16,3 +16,7 @@ def interact_db (query, query_type: str):
     if query_type =='fetch':
        query_result = cursor.fetchall()
        return_value = query_result
+
+    connection.close()
+    cursor.close()
+    return return_value
